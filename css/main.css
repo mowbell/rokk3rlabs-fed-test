@@ -17,3 +17,9 @@ body {
 .container .title{
 	text-align: center;
 }
+
+.book-item{
+	background: purple;
+	margin-bottom: 0.5em;
+	color:white;
+}
