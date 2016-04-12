@@ -36,7 +36,7 @@
 
 <!-- Our Website Content Goes Here -->
 <ng-include src="'views/header.html'"></ng-include>
-<ng-include src="'views/home.html'"></ng-include>
+<div ng-view ></div>
 
 <!-- Vendor: Javascripts -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -49,6 +49,7 @@
 <!-- Our Website Javascripts -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/ListCtrl.js"></script>
+<script src="scripts/controllers/CompletedListCtrl.js"></script>
 <script src="scripts/services/bookServices.js"></script>
 <script src="scripts/filters/bookPrice.js"></script>
 </body>

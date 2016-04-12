@@ -31,3 +31,8 @@ body {
 .item-price-col span{
 	font-size: 2em;
 }
+
+.total-completed-price{
+	color:white;
+	background: black;
+}

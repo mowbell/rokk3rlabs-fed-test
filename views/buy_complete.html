@@ -1,0 +1,36 @@
+<div class="container">
+	<h2 ng-bind="title" class="title"></h2>
+	<div class="row book-item" ng-repeat="item in items | filter:{added:true, removed:false}">
+		<div class="col-sm-2">
+			<div class="row">
+				<div class="col-sm-1">
+					{{$index + 1}}
+				</div>
+				<div class="col-sm-5">
+					<img  ng-src="{{item.getImage()}}">
+				</div>
+				<div class="col-sm-4">
+					<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div>{{item.getTitle()}}</div>
+			<a href="#">{{item.getArtist()}}</a>
+			<div>
+				<i class="fa fa-info-circle" aria-hidden="true"></i>
+			</div>
+
+		</div>
+		<div class="item-price-col col-sm-2">
+			<span>{{item.getPrice() | bookPriceFltr}}</span>
+			<br/>
+			<a href="#">See Review</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="total-completed-price col-sm-3 col-sm-offset-9">
+			<p>Total Price: {{totalPrice | bookPriceFltr}}</p>
+		</div>
+	</div>
+</div>

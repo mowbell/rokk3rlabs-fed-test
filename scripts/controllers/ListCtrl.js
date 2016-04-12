@@ -1,7 +1,8 @@
-app.controller('ListCtrl', ['$scope', 'bookServices', function($scope, bookServices) {
+app.controller('ListCtrl', ['$scope', '$location','bookServices', function($scope, $location, bookServices) {
     $scope.title = "MY WISH LIST";
     $scope.items = [];
     $scope.totalPrice=0;
+   
     bookServices.getItems()
         .then(function(items) {
             $scope.items=items;
@@ -11,6 +12,7 @@ app.controller('ListCtrl', ['$scope', 'bookServices', function($scope, bookServi
     function _buyBook(book) {
     	book.setAsAdded();
     	$scope.totalPrice-=book.getPrice();
+    	$location.path("/completed");
     }
 
     function _calculateTotalPrice(){
@@ -30,6 +32,14 @@ app.controller('ListCtrl', ['$scope', 'bookServices', function($scope, bookServi
 			book.setAsAdded();
 		});	
 		_calculateTotalPrice();
+
+		$location.path("/completed");
     }
     $scope.addAllBooks = _addAllBooks;
+
+    function _removeBook(book) {
+    	book.removed=true;
+    	$scope.totalPrice-=book.getPrice();
+    }
+    $scope.removeBook = _removeBook;
 }]);
