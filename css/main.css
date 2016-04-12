@@ -23,3 +23,11 @@ body {
 	margin-bottom: 0.5em;
 	color:white;
 }
+
+.item-price-col{
+	text-align: center;
+}
+
+.item-price-col span{
+	font-size: 2em;
+}
