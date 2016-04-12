@@ -18,6 +18,10 @@ body {
 	text-align: center;
 }
 
+.main-wrapper{
+	margin-top:3em;
+}
+
 .book-item{
 	background: purple;
 	margin-bottom: 0.5em;
