@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             },
             //se configura que archivos se monitorean para ejecutar instantaneamente cambios
             dev: {
-                files: ['Gruntfile.js', 'scripts/*.js','scripts/**/*.js', 'views/*.html', 'css/*.css'],
+                files: ['Gruntfile.js', 'index.html', 'scripts/*.js','scripts/**/*.js', 'views/*.html', 'css/*.css'],
                 tasks: ['jshint'],
 
                 options: {
@@ -25,7 +25,35 @@ module.exports = function(grunt) {
                 options: {
                     hostname: 'localhost',
                     port: 8080,
-                    livereload: true
+                    livereload: true,
+                    middleware: function(connect, options, middlewares) {
+                        //https://blog.gaya.ninja/articles/static-mockup-data-endpoints-connect/
+                        middlewares.push(function(req, res, next) {
+                            //stuff will go here
+                            var endpoints = {
+                                "api/buytable.json": "api/buytable.json",
+                                "api/carousel.json": "api/carousel.json",
+                            };
+                            var match = false;
+                            var fileToRead = "";
+
+                            Object.keys(endpoints).forEach(function(url) {
+                                if (req.url.indexOf(url) === 0) {
+                                    match = true;
+                                    fileToRead = endpoints[url];
+                                }
+                            });
+
+                            //no match with the url, move along
+                            if (match === false) {
+                                return next();
+                            }
+
+                            res.end(grunt.file.read(fileToRead));
+                        });
+
+                        return middlewares;
+                    }
                 }
             }
         }

@@ -5,5 +5,15 @@ html, body {
 }
 
 body {
+	font-family: 'Oswald', sans-serif;
+}
 
+
+#logo{
+	background: black;
+	padding:1em;
+}
+
+.container .title{
+	text-align: center;
 }

@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
     <!-- Our Website CSS Styles -->
     <link rel="stylesheet" href="css/main.css">
 
@@ -32,19 +35,21 @@
 <![endif]-->
 
 <!-- Our Website Content Goes Here -->
-<h1>Welcome to Rokk3r Labs test</h1> <!-- Remove or comment this line -->
-
+<ng-include src="'views/header.html'"></ng-include>
+<ng-include src="'views/home.html'"></ng-include>
 
 <!-- Vendor: Javascripts -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <!-- Vendor: Angular, followed by our custom Javascripts -->
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 
 <!-- Our Website Javascripts -->
 <script src="scripts/app.js"></script>
+<script src="scripts/controllers/ListCtrl.js"></script>
+<script src="scripts/services/bookServices.js"></script>
 
 </body>
 </html>
