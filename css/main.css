@@ -136,6 +136,24 @@ body {
 }
 
 
+.total-price-row{
+	width: 100%;
+	margin-left: 0;
+}
+
+.total-price-col{
+	color: white;
+	background: black;
+	padding: 0.5em;
+	text-align: center;
+}
+
+.btn-add-all{
+	background: #ef69ef;
+	color: white;
+	border:none;
+}
+
 
 @media (max-width: 767px){
 	.book-item{
@@ -197,6 +215,20 @@ body {
 		text-overflow:ellipsis;
 		overflow: hidden;
 	}
+
+	.total-price-col{
+		padding: 2.5em;
+	}
+
+	.total-price-btn-col{
+		background: none;
+		padding: 0.5em 0;
+	}
+
+	.total-price-btn-col .btn-add-all{
+		width: 100%;
+	}
+
 
 }
 
