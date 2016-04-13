@@ -6,6 +6,7 @@ html, body {
 
 body {
 	font-family: 'Oswald', sans-serif;
+	background:gray;
 }
 
 
@@ -14,12 +15,15 @@ body {
 	padding:1em;
 }
 
-.container .title{
-	text-align: center;
-}
 
 .main-wrapper{
-	margin-top:3em;
+	padding-top:3em;
+	background: white;
+}
+
+
+.container .title{
+	text-align: center;
 }
 
 .book-item{
@@ -27,6 +31,8 @@ body {
 	margin-bottom: 0.5em;
 	color:white;
 }
+
+
 
 .item-price-col{
 	text-align: center;
@@ -39,4 +45,35 @@ body {
 .total-completed-price{
 	color:white;
 	background: black;
+}
+
+
+
+.footer{
+	color:white;
+	padding-top: 1em;
+}
+
+.footer .visible-xs-block{
+	text-align: center;
+	margin-bottom:1em;
+	line-height: 1em;
+}
+
+.footer .subfooter{
+	float:right;
+
+}	
+@media (max-width: 767px){
+	.footer .subfooter{
+		float:none;
+	}	
+}
+
+.footer span{
+	margin-right: 0.5em;
+}
+
+.footer img{
+	margin-top: -0.5em;
 }
