@@ -1,5 +1,28 @@
 <div class="container">
 	<h2 ng-bind="title" class="title"></h2>
+	<div class="row book-item" ng-repeat="item in items | filter:{added:false, removed:false}">
+		<div class="col-xs-2 item-details-column">
+			<div class="item-details-image">
+				<div class="valign-center">
+					{{$index + 1}}
+				</div>
+				<div class="valign-center hidden-xs">
+					<img class="img-responsive" alt="{{item.getTitle()}}" ng-src="{{item.getImage()}}">
+				</div>
+				<div class="valign-center">
+					<a class="download-item-btn" href="#" alt="Download">Download</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-9 item-details-column">
+			<h4>{{item.getTitle() | uppercase}}</h4>
+			<a href="#">{{item.getArtist()}}</a>
+			<div><i class="fa fa-info-circle" aria-hidden="true"></i></div>
+		</div>
+		<div class="col-xs-1 item-details-column valign-center">
+			<a class="remove-item-btn" href="#" alt="Remove">Remove</a>
+		</div>
+	</div>
 
 	<div class="row book-item" ng-repeat="item in items | filter:{added:false, removed:false}">
 		<div class="col-sm-2">
