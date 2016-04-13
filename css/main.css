@@ -70,8 +70,78 @@ body {
 	object-fit:cover;
 }
 
+.remove-item-col{
+	vertical-align: middle;
+}
+
+.items-details-to-buy{
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.items-details-to-buy > div{
+	display: table-cell;
+	float:none;
+}
+
+.item-price-col{
+	text-align: center;
+}
+
+.item-price-col span{
+	font-size: 1.25em;
+}
+
+.item-btn-buy-col{
+	padding: 0;
+}
+
+.item-contract-col{
+	text-align: center;
+}
+
+.total-completed-price{
+	color:white;
+	background: black;
+}
+
+
+.remove-item-btn{
+	background: url(../images/Button-Close.png) no-repeat center center;
+	background-size: 1.5em;
+	display: block;
+	text-indent: -9999px;
+	min-height: 1.5em;
+	min-width: 1.5em;
+	overflow: hidden;
+}
+
+.download-item-btn{
+	background: url(../images/Button-Download.png) no-repeat center center;
+	background-size: contain;
+	display: block;
+	text-indent: -9999px;
+	width: 60%;
+	height: 60%;
+	margin-left: 20%;
+}
+
+.btn-buy{
+	background: none;
+	border: 1px solid white;
+	color: white;
+	width: 100%;
+	text-align: center;
+}
+
+
 
 @media (max-width: 767px){
+	.book-item{
+		padding: 15px;
+	}
+
 	.item-details-column{
 		vertical-align: top;
 	}
@@ -101,46 +171,38 @@ body {
 		height: 60%;
 	}
 
+
+	.remove-item-col{
+		vertical-align: top;
+	}
+
+	.item-price-col{
+		text-align: left;
+		font-size: 1em;
+	}
+
+	.items-details-to-buy{
+		display: block;
+	}
+
+	.items-details-to-buy > div{
+		display: block
+	}
+
+	.item-btn-buy-col{
+		padding: 15px;
+	}
+	.btn-buy{
+		width: 80%;
+		text-overflow:ellipsis;
+		overflow: hidden;
+	}
+
 }
 
 
 .valign-center{
 	vertical-align: middle;
-}
-
-
-.item-price-col{
-	text-align: center;
-}
-
-.item-price-col span{
-	font-size: 2em;
-}
-
-.total-completed-price{
-	color:white;
-	background: black;
-}
-
-
-.remove-item-btn{
-	background: url(../images/Button-Close.png) no-repeat center center;
-	background-size: 1.5em;
-	display: block;
-	text-indent: -9999px;
-	min-height: 1.5em;
-	min-width: 1.5em;
-	overflow: hidden;
-}
-
-.download-item-btn{
-	background: url(../images/Button-Download.png) no-repeat center center;
-	background-size: contain;
-	display: block;
-	text-indent: -9999px;
-	width: 60%;
-	height: 60%;
-	margin-left: 20%;
 }
 
 
