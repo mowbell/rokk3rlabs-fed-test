@@ -19,7 +19,7 @@ app.controller('ListCtrl', ['$scope', '$location','bookServices', function($scop
     	$scope.totalPrice=0;
     	$.each($scope.items,function(index,book){
 
-    		if(!book.isAdded())
+    		if(!book.isAdded() && !book.removed)
 				$scope.totalPrice+=book.getPrice();
 		});
     }

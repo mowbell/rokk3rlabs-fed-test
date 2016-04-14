@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="CompletedListCtrl">
 	<a href="/"><i class="fa fa-angle-left" aria-hidden="true"></i> HOME</a>
 	<h2 ng-bind="title" class="title"></h2>
 	<div class="row book-item" ng-repeat="item in items | filter:{added:true, removed:false}">
