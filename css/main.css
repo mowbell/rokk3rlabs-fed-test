@@ -16,14 +16,16 @@ body {
 }
 
 
-.main-wrapper{
+
+
+.main-wrapper .container-fluid{
 	padding-top:2em;
 	padding-bottom:2em;
 	background: white;
 }
 
 
-.container .title{
+.container-fluid .title{
 	text-align: center;
 }
 
